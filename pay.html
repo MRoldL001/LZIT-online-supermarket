@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>支付页面</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        background-color: #f4f4f4;
+      }
+      .qrcode-container {
+        margin: 20px 0;
+        text-align: center;
+      }
+      .qr-code {
+        width: 200px;
+        height: 200px;
+        background-color: #d3d3d3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="instructions"><b>请扫描二维码以支付</b></div>
+
+    <!-- 显示二维码 -->
+    <div class="qrcode-container">
+      <img src="./src/qr.png" alt="请扫描二维码支付" class="qr-code" />
+    </div>
+  </body>
+</html>

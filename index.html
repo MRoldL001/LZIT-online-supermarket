@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>兰工院在线超市</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- 引入css样式表 "style.css" 至本网页 -->
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img src="./src/icon/title.svg" alt="标题图标" class="title-icon" />
+        兰工院在线超市
+      </h1>
+      <h2>快捷购物，一步到寝</h2>
+    </header>
+
+    <!-- 标签页 -->
+    <!-- 展示逻辑在js中使用 switchTab() 函数控制 -->
+    <nav>
+      <button class="tab-btn active" onclick="switchTab(event, '1')">水果</button>
+      <button class="tab-btn" onclick="switchTab(event, '2')">零食</button>
+      <button class="tab-btn" onclick="switchTab(event, '3')">饮料</button>
+      <button class="tab-btn" onclick="switchTab(event, '4')">洗护</button>
+      <button class="tab-btn" onclick="switchTab(event, '5')">文具</button>
+      <button class="tab-btn" onclick="switchTab(event, '6')">数码</button>
+    </nav>
+
+    <main>
+      <!-- 商品展示章节（商品容器） -->
+      <section id="products">
+        <h2>商品列表</h2>
+
+        <!-- 商品内容 -->
+        <div class="tab-content" id="1">
+          <!-- 单独的一个商品卡片 -->
+          <div class="product">
+            <img src="src/img/1-1.png" alt="苹果" class="product-img" />
+            <h3>苹果</h3>
+            <p>¥5.50/斤</p>
+            <!-- 展示逻辑在js中使用 add() 函数控制 -->
+            <button onclick="add(1.1, '苹果', 5.50)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/1-2.png" alt="香蕉" class="product-img" />
+            <h3>香蕉</h3>
+            <p>¥5.80/斤</p>
+            <button onclick="add(1.2, '香蕉', 5.80)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/1-3.jpg" alt="葡萄" class="product-img" />
+            <h3>葡萄</h3>
+            <p>¥6.20/斤</p>
+            <button onclick="add(1.3, '葡萄', 6.20)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/1-4.jpg" alt="樱桃" class="product-img" />
+            <h3>樱桃</h3>
+            <p>¥9.80/斤</p>
+            <button onclick="add(1.4, '樱桃', 9.80)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/1-5.jpg" alt="西瓜" class="product-img" />
+            <h3>西瓜</h3>
+            <p>¥1.50/斤</p>
+            <button onclick="add(1.5, '西瓜', 1.50)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/1-6.jpg" alt="砂糖桔" class="product-img" />
+            <h3>砂糖桔</h3>
+            <p>¥1.50/斤</p>
+            <button onclick="add(1.6, '砂糖桔', 3.40)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/1-7.jpg" alt="山竹" class="product-img" />
+            <h3>山竹</h3>
+            <p>¥19.80/斤</p>
+            <button onclick="add(1.7, '山竹', 19.80)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/1-8.jpg" alt="水蜜桃" class="product-img" />
+            <h3>水蜜桃</h3>
+            <p>¥5.30/斤</p>
+            <button onclick="add(1.8, '水蜜桃', 5.30)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/1-9.jpg" alt="奇异果" class="product-img" />
+            <h3>奇异果</h3>
+            <p>¥7.90/斤</p>
+            <button onclick="add(1.9, '奇异果', 7.90)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/1-10.jpg" alt="榴莲" class="product-img" />
+            <h3>榴莲</h3>
+            <p>¥27.90/斤</p>
+            <button onclick="add(1.10, '榴莲', 27.90)">加入购物车</button>
+          </div>
+        </div>
+
+        <div class="tab-content" id="2" style="display: none">
+          <div class="product">
+            <img src="src/img/2-1.jpg" alt="猪肉脯" class="product-img" />
+            <h3>猪肉脯</h3>
+            <p>¥12.00</p>
+            <button onclick="add(2.1, '猪肉脯', 12.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/2-2.jpg" alt="魔芋爽" class="product-img" />
+            <h3>魔芋爽</h3>
+            <p>¥1.00</p>
+            <button onclick="add(2.2, '魔芋爽', 1.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/2-3.jpg" alt="洋葱圈" class="product-img" />
+            <h3>洋葱圈</h3>
+            <p>¥6.50</p>
+            <button onclick="add(2.3, '洋葱圈', 6.50)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/2-4.jpg" alt="亲嘴烧" class="product-img" />
+            <h3>亲嘴烧</h3>
+            <p>¥0.50</p>
+            <button onclick="add(2.4, '亲嘴烧', 0.50)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/2-5.jpg" alt="盐焗鸡蛋" class="product-img" />
+            <h3>盐焗鸡蛋</h3>
+            <p>¥2.00</p>
+            <button onclick="add(2.5, '盐焗鸡蛋', 2.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/2-6.jpg" alt="虾片" class="product-img" />
+            <h3>虾片</h3>
+            <p>¥3.50</p>
+            <button onclick="add(2.6, '虾片', 3.50)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/2-7.jpg" alt="合味道" class="product-img" />
+            <h3>合味道</h3>
+            <p>¥6.50</p>
+            <button onclick="add(2.7, '合味道', 6.50)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/2-8.jpg" alt="大辣片" class="product-img" />
+            <h3>大辣片</h3>
+            <p>¥5.00</p>
+            <button onclick="add(2.8, '大辣片', 5.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/2-9.jpg" alt="炭烧牛肉干" class="product-img" />
+            <h3>炭烧牛肉干</h3>
+            <p>¥22.00</p>
+            <button onclick="add(2.9, '炭烧牛肉干', 22.00)">
+              加入购物车
+            </button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/2-10.jpg" alt="乐事薯片" class="product-img" />
+            <h3>乐事薯片</h3>
+            <p>¥7.00</p>
+            <button onclick="add(2.10, '乐事薯片', 7.00)">
+              加入购物车
+            </button>
+          </div>
+        </div>
+
+        <div class="tab-content" id="3" style="display: none">
+          <div class="product">
+            <img src="src/img/3-1.jpg" alt="可口可乐" class="product-img" />
+            <h3>可口可乐</h3>
+            <p>¥3.00</p>
+            <button onclick="add(3.1, '可口可乐', 3.00)">
+              加入购物车
+            </button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/3-2.jpg" alt="雪碧" class="product-img" />
+            <h3>雪碧</h3>
+            <p>¥3.00</p>
+            <button onclick="add(3.2, '雪碧', 3.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/3-3.jpg" alt="怡泉" class="product-img" />
+            <h3>怡泉</h3>
+            <p>¥4.00</p>
+            <button onclick="add(3.3, '怡泉', 4.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/3-4.jpg" alt="汇源橙汁" class="product-img" />
+            <h3>汇源橙汁</h3>
+            <p>¥10.00</p>
+            <button onclick="add(3.4, '汇源橙汁', 10.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/3-5.jpg" alt="酸梅汤" class="product-img" />
+            <h3>酸梅汤</h3>
+            <p>¥3.00</p>
+            <button onclick="add(3.5, '酸梅汤', 3.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/3-6.jpg" alt="果粒橙" class="product-img" />
+            <h3>果粒橙</h3>
+            <p>¥4.00</p>
+            <button onclick="add(3.6, '果粒橙', 4.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/3-7.jpg" alt="红牛" class="product-img" />
+            <h3>红牛</h3>
+            <p>¥5.00</p>
+            <button onclick="add(3.7, '红牛', 5.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/3-8.jpg" alt="咖世家" class="product-img" />
+            <h3>咖世家</h3>
+            <p>¥8.00</p>
+            <button onclick="add(3.8, '咖世家', 8.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/3-9.jpg" alt="阿萨姆奶茶" class="product-img" />
+            <h3>阿萨姆奶茶</h3>
+            <p>¥4.00</p>
+            <button onclick="add(3.9, '阿萨姆奶茶', 4.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/3-10.jpg" alt="康师傅绿茶" class="product-img" />
+            <h3>康师傅绿茶</h3>
+            <p>¥3.00</p>
+            <button onclick="add(3.10, '康师傅绿茶', 3.00)">加入购物车</button>
+          </div>
+        </div>
+
+        <div class="tab-content" id="4" style="display: none">
+          <div class="product">
+            <img src="src/img/4-1.jpg" alt="洗发水" class="product-img" />
+            <h3>洗发水</h3>
+            <p>¥25.00</p>
+            <button onclick="add(4.1, '洗发水', 25.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/4-2.jpg" alt="沐浴露" class="product-img" />
+            <h3>沐浴露</h3>
+            <p>¥30.00</p>
+            <button onclick="add(4.2, '沐浴露', 30.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/4-3.jpg" alt="牙膏" class="product-img" />
+            <h3>牙膏</h3>
+            <p>¥12.00</p>
+            <button onclick="add(4.3, '牙膏', 12.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/4-4.jpg" alt="洗手液" class="product-img" />
+            <h3>洗手液</h3>
+            <p>¥18.00</p>
+            <button onclick="add(4.4, '洗手液', 18.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/4-5.jpg" alt="润肤露" class="product-img" />
+            <h3>润肤露</h3>
+            <p>¥20.00</p>
+            <button onclick="add(4.5, '润肤露', 20.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/4-6.jpg" alt="护手霜" class="product-img" />
+            <h3>护手霜</h3>
+            <p>¥15.00</p>
+            <button onclick="add(4.6, '护手霜', 15.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/4-7.jpg" alt="洗面奶" class="product-img" />
+            <h3>洗面奶</h3>
+            <p>¥22.00</p>
+            <button onclick="add(4.7, '洗面奶', 22.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/4-8.jpg" alt="面膜" class="product-img" />
+            <h3>面膜</h3>
+            <p>¥3.00</p>
+            <button onclick="add(4.8, '面膜', 3.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/4-9.jpg" alt="护发素" class="product-img" />
+            <h3>护发素</h3>
+            <p>¥28.00</p>
+            <button onclick="add(4.9, '护发素', 28.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/4-10.jpg" alt="浴盐" class="product-img" />
+            <h3>浴盐</h3>
+            <p>¥5.00</p>
+            <button onclick="add(4.10, '浴盐', 5.00)">加入购物车</button>
+          </div>
+        </div>
+
+        <div class="tab-content" id="5" style="display: none">
+          <div class="product">
+            <img src="src/img/5-1.jpg" alt="钢笔" class="product-img" />
+            <h3>钢笔</h3>
+            <p>¥19.90</p>
+            <button onclick="add(5.1, '钢笔', 19.90)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/5-2.jpg" alt="铅笔" class="product-img" />
+            <h3>铅笔</h3>
+            <p>¥1.20</p>
+            <button onclick="add(5.2, '铅笔', 1.20)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/5-3.jpg" alt="橡皮" class="product-img" />
+            <h3>橡皮</h3>
+            <p>¥1.50</p>
+            <button onclick="add(5.3, '橡皮', 1.50)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/5-4.jpg" alt="书包" class="product-img" />
+            <h3>书包</h3>
+            <p>¥69.90</p>
+            <button onclick="add(5.4, '书包', 69.90)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/5-5.jpg" alt="便签本" class="product-img" />
+            <h3>便签本</h3>
+            <p>¥6.80</p>
+            <button onclick="add(5.5, '便签本', 6.80)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/5-6.jpg" alt="文件夹" class="product-img" />
+            <h3>文件夹</h3>
+            <p>¥14.90</p>
+            <button onclick="add(5.6, '文件夹', 14.90)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/5-7.jpg" alt="书签" class="product-img" />
+            <h3>书签</h3>
+            <p>¥5.90</p>
+            <button onclick="add(5.7, '书签', 5.90)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/5-8.jpg" alt="圆珠笔" class="product-img" />
+            <h3>圆珠笔</h3>
+            <p>¥3.00</p>
+            <button onclick="add(5.8, '圆珠笔', 3.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/5-9.jpg" alt="马克笔" class="product-img" />
+            <h3>马克笔</h3>
+            <p>¥9.90</p>
+            <button onclick="add(5.9, '马克笔', 9.90)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/5-10.jpg" alt="笔记本" class="product-img" />
+            <h3>笔记本</h3>
+            <p>¥8.00</p>
+            <button onclick="add(5.10, '笔记本', 8.00)">加入购物车</button>
+          </div>
+
+        </div>
+
+        <div class="tab-content" id="6" style="display: none">
+          <div class="product">
+            <img src="src/img/6-1.jpg" alt="小米14" class="product-img" />
+            <h3>小米14</h3>
+            <p>¥3,999.00</p>
+            <button onclick="add(6.1, '小米14', 3999.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/6-2.jpg" alt="Anker PowerCore 10000充电宝" class="product-img"/>
+            <h3>Anker PowerCore 10000充电宝</h3>
+            <p>¥149.00</p>
+            <button onclick="add(6.2, 'Anker PowerCore 10000充电宝', 149.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/6-3.jpg" alt="JBL Flip 5蓝牙音响" class="product-img"/>
+            <h3>JBL Flip 5蓝牙音响</h3>
+            <p>¥799.00</p>
+            <button onclick="add(6.3, 'JBL Flip 5蓝牙音响', 799.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/6-4.jpg" alt="贝尔金BOOST↑CHARGE无线充电器" class="product-img"/>
+            <h3>贝尔金BOOST↑CHARGE无线充电器</h3>
+            <p>¥750.00</p>
+            <button onclick="add(6.4, '贝尔金BOOST↑CHARGE无线充电器', 750.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/6-5.jpg" alt="华为Band 7智能手环" class="product-img"/>
+            <h3>华为Band 7智能手环</h3>
+            <p>¥269.00</p>
+            <button onclick="add(6.5, '华为Band 7智能手环', 269.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/6-6.jpg" alt="索尼DPT-CP1数码纸" class="product-img"/>
+            <h3>索尼DPT-CP1数码纸</h3>
+            <p>¥199.00</p>
+            <button onclick="add(6.6, '索尼DPT-CP1数码纸', 199.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/6-7.jpg" alt="罗技M350无线鼠标" class="product-img"/>
+            <h3>罗技M350无线鼠标</h3>
+            <p>¥329.00</p>
+            <button onclick="add(6.7, '罗技M350无线鼠标', 329.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/6-8.jpg" alt="雷蛇黑寡妇V3机械键盘" class="product-img"/>
+            <h3>雷蛇黑寡妇V3机械键盘</h3>
+            <p>¥799.00</p>
+            <button onclick="add(6.8, '雷蛇黑寡妇V3机械键盘', 799.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/6-9.jpg" alt="iPad Air 2022" class="product-img"/>
+            <h3>iPad Air 2022</h3>
+            <p>¥4,599.00</p>
+            <button onclick="add(6.9, 'iPad Air 2022', 4599.00)">加入购物车</button>
+          </div>
+
+          <div class="product">
+            <img src="src/img/6-10.jpg" alt="西部数据My Passport 4TB移动硬盘" class="product-img"/>
+            <h3>西部数据My Passport 4TB移动硬盘</h3>
+            <p>¥1,099.00</p>
+            <button onclick="add(6.10, '西部数据My Passport 4TB移动硬盘', 1099.00)">加入购物车</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 购物车章节 -->
+      <section id="cart">
+        <h2>购物车</h2>
+        <!-- 购物车项目 -->
+        <div id="cart-items"></div>
+        <!-- 购物车总价 -->
+        <div id="cart-total">
+          <p>¥<span id="total-price">0.00</span></p>
+          <!-- 购物车总价_按钮（结算按钮） -->
+          <button id="checkout-btn" onclick="checkout()">结算</button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <!-- 引入JavaScript "script.js" 至本网页 -->
+  </body>
+  <!-- 底栏 -->
+  <footer id="footer">
+    <p>Copyleft ! 2024,  Winter Lee</p>
+  </footer>
+</html>
